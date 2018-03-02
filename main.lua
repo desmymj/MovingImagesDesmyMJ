@@ -33,5 +33,13 @@ beetleship.y = display.contentHeight/3
 local function Moveship(event)
 	--add the scroll speed to the x-value of the ship
 	beetleship.x = beetleship + scrollSpeed
-	--change the transparency of the ship every time it moves so that it fades out
-	
+	--change the of the ship every time it moves so that it fades out
+	beetleship.alpha = beethlehip.alpha + 0.01
+end
+
+--MoveShip will be called over again
+Runtime:addEventListener("enterFrame", MoveShip)
+
+--beetleship:scale (-1, 1) 
+
+change beetleship.alpha to = 1
